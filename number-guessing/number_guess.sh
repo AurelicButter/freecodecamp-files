@@ -8,8 +8,6 @@ echo "Enter your username:"
 read username
 
 userInfo=$($PSQL "SELECT username FROM games WHERE username='$username';")
-games_played=0
-best_game=0
 
 if [ -z $userInfo ]
 then
